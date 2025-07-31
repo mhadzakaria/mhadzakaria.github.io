@@ -4,25 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahmad | Ruby on Rails Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fefefe;
+      font-family: 'Inter', sans-serif;
+      background-color: #fdfdfd;
       color: #333;
       line-height: 1.6;
     }
 
     header {
-      background-color: #e8f0fe;
-      padding: 2rem;
+      background-color: #f0f4f8;
+      padding: 3rem 1rem;
       text-align: center;
-      border-bottom: 3px solid #d0d7e5;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #2c3e50;
     }
 
@@ -32,26 +36,55 @@
     }
 
     .content {
-      max-width: 800px;
+      max-width: 960px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
 
     .section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     .section h2 {
-      color: #34495e;
-      border-bottom: 2px solid #ddd;
+      color: #2c3e50;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e0e0e0;
       padding-bottom: 0.5rem;
     }
 
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
     .project {
-      margin-top: 1rem;
       background-color: #f5f7fa;
-      padding: 1rem;
-      border-radius: 8px;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.03);
     }
 
     .project h3 {
@@ -59,9 +92,18 @@
       color: #2c3e50;
     }
 
-    .project p {
-      margin: 0.5rem 0 0;
-      color: #555;
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skills-list span {
+      background-color: #dee9f7;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      color: #2c3e50;
     }
 
     footer {
@@ -69,45 +111,70 @@
       padding: 2rem 1rem;
       background-color: #f0f4f8;
       color: #666;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Ahmad</h1>
-    <p>Ruby on Rails Developer | 7+ Years of Experience | Open Source & Product Lover</p>
+    <p>Ruby on Rails Developer | Crafting Scalable Web Apps Since 2016</p>
   </header>
 
   <div class="content">
     <section class="section">
       <h2>About Me</h2>
-      <p>I’m a passionate Ruby on Rails developer with over 7 years of experience building web applications. I enjoy clean code, clean design, and solving real-world problems through efficient backend and frontend solutions.</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hi! I’m Ahmad, a Ruby on Rails developer with over 7 years of experience building web applications. I’m passionate about clean architecture, test-driven development, and creating products that matter. I specialize in full-stack development using Rails, PostgreSQL, TailwindCSS, and Sidekiq.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://avatars.githubusercontent.com/u/11205229?v=4" alt="Ahmad profile photo" />
+        </div>
+      </div>
     </section>
 
     <section class="section">
       <h2>Projects</h2>
-      <div class="project">
-        <h3>NinjaSuites.ai</h3>
-        <p>An AI-powered SaaS built for productivity and automation. I worked on fullstack Rails features and optimized Sidekiq jobs.</p>
+      <div class="project-grid">
+        <div class="project">
+          <h3>NinjaSuites.ai</h3>
+          <p>AI-powered SaaS built with Rails, Sidekiq, and PostgreSQL. I contributed to core feature development and AI workflows.</p>
+        </div>
+        <div class="project">
+          <h3>OpenBuild</h3>
+          <p>CMS + eCommerce combo with multi-tenant Rails architecture. Custom user roles and clean UI.</p>
+        </div>
+        <div class="project">
+          <h3>Xpeer</h3>
+          <p>Real-time booking engine built with Rails and Hotwire. I handled access control and API integrations.</p>
+        </div>
       </div>
-      <div class="project">
-        <h3>OpenBuild</h3>
-        <p>Custom CMS and e-commerce features using Rails and PostgreSQL, with strong focus on modular development.</p>
-      </div>
-      <div class="project">
-        <h3>Xpeer</h3>
-        <p>Real-time booking system with role-based access and secure API integration.</p>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span>Ruby</span>
+        <span>Rails</span>
+        <span>PostgreSQL</span>
+        <span>Sidekiq</span>
+        <span>Redis</span>
+        <span>Hotwire</span>
+        <span>TailwindCSS</span>
+        <span>RSpec</span>
+        <span>Docker</span>
       </div>
     </section>
 
     <section class="section">
       <h2>Contact</h2>
-      <p>Email: azak808@gmail.com<br />Location: Padalarang, Bandung Barat, Indonesia</p>
+      <p>Email: <a href="mailto:azak808@gmail.com">azak808@gmail.com</a><br />Location: Padalarang, Bandung Barat, Indonesia</p>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Ahmad. Built with ❤️ and Rails.</p>
+    <p>&copy; 2025 Ahmad — Built with ❤️ and Ruby on Rails</p>
   </footer>
 </body>
 </html>
